@@ -11,7 +11,7 @@ import { button } from './src/recipes/button';
 import { iconButton } from './src/recipes/icon-button';
 import { input } from './src/recipes/input';
 import { textarea } from './src/recipes/textarea';
-// import { text } from './src/recipes/text';
+import { text } from './src/recipes/text';
 
 // using pandas methods to define type-safe tokens
 const theme = {
@@ -21,7 +21,7 @@ const theme = {
     easings: { ...pandaPandaPreset.theme.tokens.easings },
     durations: { ...pandaPandaPreset.theme.tokens.durations },
     letterSpacings: { ...pandaPandaPreset.theme.tokens.letterSpacings },
-    lineHeights: { ...pandaPandaPreset.theme.tokens.lineHeights },
+    lineHeights: { ...tokens.lineHeights },
     blurs: { ...pandaPandaPreset.theme.tokens.blurs },
     animations: { ...pandaPandaPreset.theme.tokens.animations },
     colors: tokens.colors,
@@ -84,8 +84,11 @@ export default defineConfig({
         ...pandaPandaPreset.theme.breakpoints,
         xs: '480px',
       },
+      textStyles: {
+        ...tokens.textStyles,
+      },
       recipes: {
-        // text: text,
+        text: text,
         button: button,
         iconButton: iconButton,
         input: input,

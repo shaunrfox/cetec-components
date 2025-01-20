@@ -96,7 +96,7 @@ export const colors = {
 };
 
 export const fonts = {
-  heading: { value: "'Ruda Variable', sans-serif;" },
+  heading: { value: "'Ruda Variable', Open Sans, Source Sans, sans-serif;" },
   sans: { value: "'Open Sans Variable', Geneva, Tahoma, Verdana, sans-serif" },
   mono: {
     value:
@@ -169,6 +169,21 @@ export const fontSizes = {
   96: { value: '6rem' },
 };
 
+export const lineHeights = {
+  12: { value: '0.75rem' },
+  14: { value: '0.875rem' },
+  16: { value: '1rem' },
+  20: { value: '1.25rem' },
+  24: { value: '1.5rem' },
+  32: { value: '2rem' },
+  40: { value: '2.5rem' },
+  48: { value: '3rem' },
+  64: { value: '4rem' },
+  72: { value: '4.5rem' },
+  80: { value: '5rem' },
+  96: { value: '6rem' },
+};
+
 export const radii = {
   0: { value: '0' },
   1: { value: '0.0625rem' },
@@ -179,126 +194,143 @@ export const radii = {
   100: { value: '100%' },
 };
 
+const baseHeadingStyles = {
+  fontFamily: 'heading',
+  fontWeight: 'bold',
+  color: 'slate.90',
+  _osDark: { color: 'slate.5' },
+};
+
+const baseBodyTextStyles = {
+  fontFamily: 'sans',
+  fontWeight: 'normal',
+  color: 'slate.70',
+  _osDark: { color: 'slate.20' },
+};
+
+const baseMonoStyles = {
+  fontFamily: 'mono',
+  fontWeight: 'normal',
+  color: 'slate.70',
+  _osDark: { color: 'slate.20' },
+};
+
 export const textStyles = {
   display: {
-    base: {
-      fontFamily: 'sans',
-      fontWeight: 'bold',
-      color: { base: 'slate.90', _osDark: 'slate.5' },
-    },
     lg: {
       value: {
+        ...baseHeadingStyles,
         fontSize: '72',
         lineHeight: '64',
       },
     },
     md: {
       value: {
+        ...baseHeadingStyles,
         fontSize: '64',
         lineHeight: '64',
       },
     },
     sm: {
       value: {
+        ...baseHeadingStyles,
         fontSize: '56',
         lineHeight: '56',
       },
     },
     xs: {
       value: {
+        ...baseHeadingStyles,
         fontSize: '48',
         lineHeight: '56',
       },
     },
   },
   heading: {
-    base: {
-      fontFamily: 'sans',
-      fontWeight: 'bold',
-      color: { base: 'slate.90', _osDark: 'slate.5' },
-    },
     lg: {
-      value: {
-        fontSize: '40',
-        lineHeight: '40',
-      },
+      ...baseHeadingStyles,
+      fontSize: sizes[40],
+      lineHeight: sizes[40],
     },
     md: {
       value: {
-        fontSize: '32',
-        lineHeight: '32',
+        ...baseHeadingStyles,
+        fontSize: sizes[32],
+        lineHeight: sizes[32],
       },
     },
     sm: {
       value: {
-        fontSize: '24',
-        lineHeight: '24',
+        ...baseHeadingStyles,
+        fontSize: sizes[24],
+        lineHeight: sizes[24],
       },
     },
     xs: {
       value: {
-        fontSize: '20',
-        lineHeight: '24',
+        ...baseHeadingStyles,
+        fontSize: sizes[20],
+        lineHeight: sizes[24],
       },
     },
   },
   body: {
-    base: {
-      fontFamily: 'serif',
-      color: { base: 'slate.70', _osDark: 'slate.20' },
-    },
     lg: {
       value: {
-        fontSize: '20',
-        lineHeight: '24',
+        ...baseBodyTextStyles,
+        fontSize: sizes[20],
+        lineHeight: sizes[24],
       },
     },
     md: {
       value: {
-        fontSize: '16',
-        lineHeight: '20',
+        ...baseBodyTextStyles,
+        fontSize: sizes[16],
+        lineHeight: sizes[20],
       },
     },
     sm: {
       value: {
-        fontSize: '14',
-        lineHeight: '20',
+        ...baseBodyTextStyles,
+        fontSize: sizes[14],
+        lineHeight: sizes[20],
       },
     },
     xs: {
+      ...baseBodyTextStyles,
       value: {
-        fontSize: '12',
-        lineHeight: '16',
+        fontSize: sizes[12],
+        lineHeight: sizes[16],
       },
     },
   },
   mono: {
-    base: {
-      fontFamily: 'mono',
-      color: { base: 'slate.70', _osDark: 'slate.20' },
-    },
     lg: {
       value: {
-        fontSize: '20',
-        lineHeight: '24',
+        ...baseMonoStyles,
+        fontSize: sizes[20],
+        lineHeight: sizes[24],
       },
     },
     md: {
       value: {
-        fontSize: '16',
-        lineHeight: '20',
+        ...baseMonoStyles,
+        fontSize: sizes[16],
+        lineHeight: sizes[20],
       },
     },
     sm: {
       value: {
-        fontSize: '14',
-        lineHeight: '20',
+        ...baseMonoStyles,
+        fontSize: sizes[14],
+        lineHeight: sizes[20],
       },
     },
     xs: {
       value: {
-        fontSize: '12',
-        lineHeight: '16',
+        ...baseMonoStyles,
+        fontSize: sizes[12],
+        lineHeight: sizes[16],
       },
     },
   },

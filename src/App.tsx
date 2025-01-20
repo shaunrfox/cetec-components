@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { css } from '@styled-system/css';
-import { HStack, VStack, Container, Box, Grid, Flex } from '@styled-system/jsx';
+import { HStack, VStack, Container, Grid, Flex } from '@styled-system/jsx';
 import { Text } from '~/components/Text';
 import { Heading } from '~/components/Heading';
 import { Button } from '~/components/Button';
@@ -22,8 +22,7 @@ function IconList() {
           <Icon
             name={icon}
             className={css({
-              fill: 'slate.90',
-              _osDark: { fill: 'yellow.20' },
+              fill: 'gold.30',
             })}
           />
           <Text>{icon}</Text>
@@ -39,7 +38,7 @@ const Section = ({ children }: { children?: ReactNode }) => {
     <Grid
       gridTemplateColumns={'10rem 1fr'}
       borderTop={'1px solid pink'}
-      borderColor={{ base: 'slate.30', _osDark: 'slate.80' }}
+      borderColor={{ base: 'slate.10', _osDark: 'slate.80' }}
       py={'24'}
       pb={'96'}
       gap={'40'}
@@ -53,50 +52,57 @@ const Section = ({ children }: { children?: ReactNode }) => {
 export default function App() {
   return (
     <VStack>
-      <Flex w="full" py={'24'} bg={'slate.80'} mb={'56'}>
+      <Flex
+        w="full"
+        py={'24'}
+        bg={{ base: 'slate.10', _osDark: 'slate.80' }}
+        mb={'56'}
+      >
         <Container maxW={'5xl'}>
-          <Heading as="h1">Cetec Components</Heading>
+          <Text as="h1">Cetec Components</Text>
         </Container>
       </Flex>
       <Container maxW={'5xl'}>
         <VStack gap={'8'}>
           <Section>
-            <Heading as="h2" level={24}>
-              Buttons
-            </Heading>
-            <HStack>
-              <Button variant="primary">Primary</Button>
-              <Button>Standard</Button>
-              <Button variant="hollow" size="large">
-                Hollow
-              </Button>
-              <Button variant="ghost">Ghost</Button>
-              <Button variant="danger" size="small">
-                Danger Small
-              </Button>
-              <Icon name="arrow-left" />
-              <IconButton>
-                <Icon name="arrow-left" />
-              </IconButton>
-              <IconButton variant="primary" size="large">
-                <Icon name="arrow-right" />
-              </IconButton>
-            </HStack>
+            <Text as="h2">Buttons</Text>
+            <VStack alignItems={'flex-start'} gap={'24'}>
+              <HStack>
+                <Button variant="primary">Primary</Button>
+                <Button>Standard</Button>
+                <Button variant="hollow">Hollow</Button>
+                <Button variant="ghost">Ghost</Button>
+                <Button variant="cta">CTA</Button>
+                <Button variant="danger">Danger</Button>
+              </HStack>
+              <HStack>
+                <IconButton>
+                  <Icon name="arrow-left" />
+                </IconButton>
+                <IconButton variant="primary" size="large">
+                  <Icon name="arrow-right" />
+                </IconButton>
+              </HStack>
+            </VStack>
           </Section>
           <Section>
-            <Heading as="h2" level={24}>
-              Text
-            </Heading>
+            <Text as="h2">Text</Text>
             <VStack alignItems={'flex-start'}>
-              <Text as="h1" heading={1}>
-                Heading 1
-              </Text>
-              <Text font="serif">
+              <HStack gap={'24'}>
+                <Text as="h1">Heading 1</Text>
+                <code>
+                  <Text as="h1">Heading 1</Text>
+                </code>
+              </HStack>
+              <Text as="h2">Heading 2</Text>
+              <Text as="h3">Heading 3</Text>
+              <Text as="h4">Heading 4</Text>
+              <Text font="mono">
                 Signs night have sixth hath that likeness us fill you're subdue
                 fowl brought divide beginning multiply brought created after
                 open given of made beginning multiply green.
               </Text>
-              <Text>
+              <Text italic>
                 Place appear green. Also, saying male subdue fruitful winged
                 fourth had void winged. So green spirit, herb day had there
                 replenish, lights lesser signs. Place whales i tree under him
@@ -111,15 +117,13 @@ export default function App() {
             </VStack>
           </Section>
           <Section>
-            <Heading as="h2" level={24}>
-              Icons
-            </Heading>
+            <Text as="h2">Icons</Text>
             <IconList />
           </Section>
           {/* <Section>
-            <Heading as="h2" level={24}>
+            <Text as="h2">
               Inputs
-            </Heading>
+            </Text>
             <VStack>
               <HStack gap={'24'}>
                 <Input label="First" type="text" />

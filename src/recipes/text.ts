@@ -1,5 +1,4 @@
 import { defineRecipe } from '@pandacss/dev';
-// import * as tokens from '../styles/tokens';
 
 const baseHeadingStyles = {
   fontFamily: 'heading',
@@ -200,4 +199,4 @@ export const text = defineRecipe({
   },
 });
 
-export type TextVariantProps = typeof text.variantProps;
+// export type TextVariantProps = typeof text.variantProps;

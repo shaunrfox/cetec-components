@@ -29,7 +29,6 @@ const theme = {
     fontSizes: tokens.sizes,
     fontWeights: tokens.fontWeights,
     sizes: tokens.sizes,
-    // sizes: { ...pandaPandaPreset.theme.tokens.sizes },
     spacing: tokens.sizes,
     radii: tokens.radii,
   }),
@@ -71,7 +70,6 @@ export default defineConfig({
       fonts: theme.tokens.fonts,
       fontSizes: theme.tokens.fontSizes,
       fontWeights: theme.tokens.fontWeights,
-      // sizes: { ...theme.tokens.sizes, ...tokens.sizes },
       sizes: theme.tokens.sizes,
       spacing: theme.tokens.sizes,
       radii: theme.tokens.radii,
@@ -83,9 +81,6 @@ export default defineConfig({
       breakpoints: {
         ...pandaPandaPreset.theme.breakpoints,
         xs: '480px',
-      },
-      textStyles: {
-        ...tokens.textStyles,
       },
       recipes: {
         text: text,

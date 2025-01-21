@@ -1,1 +1,1 @@
-export { Text, type TextVariantProps } from './Text';
+export { Text } from './Text';

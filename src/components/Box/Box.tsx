@@ -1,4 +1,4 @@
-import { Box as pandaBox } from "../../../styled-system/jsx";
+import { Box as pandaBox } from '@styled-system/jsx';
 
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: React.ElementType;
@@ -19,9 +19,9 @@ const flexColumnStyles = css`
 `;
 
 const Box = React.forwardRef<HTMLDivElement, BoxProps>(
-  ({ as: Component = "div", ...props }, ref) => {
+  ({ as: Component = 'div', ...props }, ref) => {
     return <Component ref={ref} css={boxStyles} {...props} />;
-  }
+  },
 );
 
 const Flex = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => (

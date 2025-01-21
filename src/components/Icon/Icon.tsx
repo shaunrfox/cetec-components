@@ -1,9 +1,11 @@
 import { cx } from '@styled-system/css';
 import { iconStyle } from './iconStyle';
+import { IconNamesList } from './utils/icons';
 import { type HTMLStyledProps } from '@styled-system/types';
 
 type IconProps = HTMLStyledProps<'svg'> & {
-  name: string;
+  name: IconNamesList;
+  className?: string;
 };
 
 const IconSVG = ({
@@ -28,7 +30,7 @@ const IconSVG = ({
 export const Icon = ({ name, className, ...props }: IconProps) => {
   return (
     <IconSVG className={className} width="24" height="24" {...props}>
-      <use xlinkHref={`/sprite.svg#${name}`} width="24" height="24" />
+      <use xlinkHref={`/sprite.svg#${name}`} />
     </IconSVG>
   );
 };

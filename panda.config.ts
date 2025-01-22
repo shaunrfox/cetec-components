@@ -7,11 +7,11 @@ import pandaPandaPreset from '@pandacss/preset-panda';
 import * as tokens from './src/styles/tokens';
 import { globalCss } from './src/styles/globalStyle';
 
-import { button } from './src/recipes/button';
-import { iconButton } from './src/recipes/icon-button';
-import { input } from './src/recipes/input';
-import { textarea } from './src/recipes/textarea';
-import { text } from './src/recipes/text';
+import { buttonRecipe, iconButtonRecipe } from './src/recipes/button';
+// import { iconButton } from './src/recipes/icon-button';
+import { inputRecipe } from './src/recipes/input';
+import { textareaRecipe } from './src/recipes/textarea';
+import { textRecipe } from './src/recipes/text';
 
 // using pandas methods to define type-safe tokens
 const theme = {
@@ -35,9 +35,9 @@ const theme = {
   semanticTokens: defineSemanticTokens({
     colors: {
       primary: tokens.colors.gold[30],
-      success: tokens.colors.green[60],
-      warning: tokens.colors.yellow[50],
-      danger: tokens.colors.red[40],
+      success: tokens.colors.green[40],
+      warning: tokens.colors.yellow[30],
+      danger: tokens.colors.red[50],
     },
   }),
 };
@@ -83,11 +83,11 @@ export default defineConfig({
         xs: '480px',
       },
       recipes: {
-        text: text,
-        button: button,
-        iconButton: iconButton,
-        input: input,
-        textarea: textarea,
+        text: textRecipe,
+        button: buttonRecipe,
+        iconButton: iconButtonRecipe,
+        input: inputRecipe,
+        textarea: textareaRecipe,
       },
       slotRecipes: {},
     },

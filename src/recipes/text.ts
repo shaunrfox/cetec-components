@@ -142,7 +142,7 @@ export const textStyles = {
   },
 };
 
-export const text = defineRecipe({
+export const textRecipe = defineRecipe({
   className: 'text',
   jsx: ['Text'],
   base: {

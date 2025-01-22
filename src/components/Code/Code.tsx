@@ -10,10 +10,18 @@ interface Props extends BoxProps {
 export const Code = (props: PropsWithChildren<Props>) => {
   const { children, lang, ...rest } = props;
   return (
-    <Box bg="slate.80" position="relative" lang={lang} {...rest}>
-      <Box overflow="auto" p="4" whiteSpace="pre" fontSize="14">
-        {children}
-      </Box>
+    <Box
+      as="code"
+      bg="slate.80"
+      position="relative"
+      overflow="auto"
+      p="4"
+      whiteSpace="pre"
+      fontSize="14"
+      lang={lang}
+      {...rest}
+    >
+      {children}
     </Box>
   );
 };

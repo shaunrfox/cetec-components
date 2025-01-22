@@ -215,204 +215,204 @@ const baseMonoStyles = {
   _osDark: { color: 'slate.20' },
 };
 
-export const textStyles = {
-  display: {
-    lg: {
-      value: {
-        ...baseHeadingStyles,
-        fontSize: '72',
-        lineHeight: '64',
-      },
-    },
-    md: {
-      value: {
-        ...baseHeadingStyles,
-        fontSize: '64',
-        lineHeight: '64',
-      },
-    },
-    sm: {
-      value: {
-        ...baseHeadingStyles,
-        fontSize: '56',
-        lineHeight: '56',
-      },
-    },
-    xs: {
-      value: {
-        ...baseHeadingStyles,
-        fontSize: '48',
-        lineHeight: '56',
-      },
-    },
-  },
-  heading: {
-    lg: {
-      ...baseHeadingStyles,
-      fontSize: sizes[40],
-      lineHeight: sizes[40],
-    },
-    md: {
-      value: {
-        ...baseHeadingStyles,
-        fontSize: sizes[32],
-        lineHeight: sizes[32],
-      },
-    },
-    sm: {
-      value: {
-        ...baseHeadingStyles,
-        fontSize: sizes[24],
-        lineHeight: sizes[24],
-      },
-    },
-    xs: {
-      value: {
-        ...baseHeadingStyles,
-        fontSize: sizes[20],
-        lineHeight: sizes[24],
-      },
-    },
-  },
-  body: {
-    lg: {
-      value: {
-        ...baseBodyTextStyles,
-        fontSize: sizes[20],
-        lineHeight: sizes[24],
-      },
-    },
-    md: {
-      value: {
-        ...baseBodyTextStyles,
-        fontSize: sizes[16],
-        lineHeight: sizes[20],
-      },
-    },
-    sm: {
-      value: {
-        ...baseBodyTextStyles,
-        fontSize: sizes[14],
-        lineHeight: sizes[20],
-      },
-    },
-    xs: {
-      ...baseBodyTextStyles,
-      value: {
-        fontSize: sizes[12],
-        lineHeight: sizes[16],
-      },
-    },
-  },
-  mono: {
-    lg: {
-      value: {
-        ...baseMonoStyles,
-        fontSize: sizes[20],
-        lineHeight: sizes[24],
-      },
-    },
-    md: {
-      value: {
-        ...baseMonoStyles,
-        fontSize: sizes[16],
-        lineHeight: sizes[20],
-      },
-    },
-    sm: {
-      value: {
-        ...baseMonoStyles,
-        fontSize: sizes[14],
-        lineHeight: sizes[20],
-      },
-    },
-    xs: {
-      value: {
-        ...baseMonoStyles,
-        fontSize: sizes[12],
-        lineHeight: sizes[16],
-      },
-    },
-  },
-  //   xs: {
-  //     value: {
-  //       fontSize: '0.75rem',
-  //       lineHeight: '1rem',
-  //     },
-  //   },
-  //   sm: {
-  //     value: {
-  //       fontSize: '0.875rem',
-  //       lineHeight: '1.25rem',
-  //     },
-  //   },
-  //   md: {
-  //     value: {
-  //       fontSize: '1rem',
-  //       lineHeight: '1.5rem',
-  //     },
-  //   },
-  //   lg: {
-  //     value: {
-  //       fontSize: '1.125rem',
-  //       lineHeight: '1.75rem',
-  //     },
-  //   },
-  //   xl: {
-  //     value: {
-  //       fontSize: '1.25rem',
-  //       lineHeight: '1.75rem',
-  //     },
-  //   },
-  //   '2xl': {
-  //     value: {
-  //       fontSize: '1.5rem',
-  //       lineHeight: '2rem',
-  //     },
-  //   },
-  //   '3xl': {
-  //     value: {
-  //       fontSize: '1.875rem',
-  //       lineHeight: '2.25rem',
-  //     },
-  //   },
-  //   '4xl': {
-  //     value: {
-  //       fontSize: '2.25rem',
-  //       lineHeight: '2.5rem',
-  //     },
-  //   },
-  //   '5xl': {
-  //     value: {
-  //       fontSize: '3rem',
-  //       lineHeight: '1',
-  //     },
-  //   },
-  //   '6xl': {
-  //     value: {
-  //       fontSize: '3.75rem',
-  //       lineHeight: '1',
-  //     },
-  //   },
-  //   '7xl': {
-  //     value: {
-  //       fontSize: '4.5rem',
-  //       lineHeight: '1',
-  //     },
-  //   },
-  //   '8xl': {
-  //     value: {
-  //       fontSize: '6rem',
-  //       lineHeight: '1',
-  //     },
-  //   },
-  //   '9xl': {
-  //     value: {
-  //       fontSize: '8rem',
-  //       lineHeight: '1',
-  //     },
-  //   },
-};
+// export const textStyles = {
+//   display: {
+//     lg: {
+//       value: {
+//         ...baseHeadingStyles,
+//         fontSize: '72',
+//         lineHeight: '64',
+//       },
+//     },
+//     md: {
+//       value: {
+//         ...baseHeadingStyles,
+//         fontSize: '64',
+//         lineHeight: '64',
+//       },
+//     },
+//     sm: {
+//       value: {
+//         ...baseHeadingStyles,
+//         fontSize: '56',
+//         lineHeight: '56',
+//       },
+//     },
+//     xs: {
+//       value: {
+//         ...baseHeadingStyles,
+//         fontSize: '48',
+//         lineHeight: '56',
+//       },
+//     },
+//   },
+//   heading: {
+//     lg: {
+//       ...baseHeadingStyles,
+//       fontSize: sizes[40],
+//       lineHeight: sizes[40],
+//     },
+//     md: {
+//       value: {
+//         ...baseHeadingStyles,
+//         fontSize: sizes[32],
+//         lineHeight: sizes[32],
+//       },
+//     },
+//     sm: {
+//       value: {
+//         ...baseHeadingStyles,
+//         fontSize: sizes[24],
+//         lineHeight: sizes[24],
+//       },
+//     },
+//     xs: {
+//       value: {
+//         ...baseHeadingStyles,
+//         fontSize: sizes[20],
+//         lineHeight: sizes[24],
+//       },
+//     },
+//   },
+//   body: {
+//     lg: {
+//       value: {
+//         ...baseBodyTextStyles,
+//         fontSize: sizes[20],
+//         lineHeight: sizes[24],
+//       },
+//     },
+//     md: {
+//       value: {
+//         ...baseBodyTextStyles,
+//         fontSize: sizes[16],
+//         lineHeight: sizes[20],
+//       },
+//     },
+//     sm: {
+//       value: {
+//         ...baseBodyTextStyles,
+//         fontSize: sizes[14],
+//         lineHeight: sizes[20],
+//       },
+//     },
+//     xs: {
+//       ...baseBodyTextStyles,
+//       value: {
+//         fontSize: sizes[12],
+//         lineHeight: sizes[16],
+//       },
+//     },
+//   },
+//   mono: {
+//     lg: {
+//       value: {
+//         ...baseMonoStyles,
+//         fontSize: sizes[20],
+//         lineHeight: sizes[24],
+//       },
+//     },
+//     md: {
+//       value: {
+//         ...baseMonoStyles,
+//         fontSize: sizes[16],
+//         lineHeight: sizes[20],
+//       },
+//     },
+//     sm: {
+//       value: {
+//         ...baseMonoStyles,
+//         fontSize: sizes[14],
+//         lineHeight: sizes[20],
+//       },
+//     },
+//     xs: {
+//       value: {
+//         ...baseMonoStyles,
+//         fontSize: sizes[12],
+//         lineHeight: sizes[16],
+//       },
+//     },
+//   },
+//   //   xs: {
+//   //     value: {
+//   //       fontSize: '0.75rem',
+//   //       lineHeight: '1rem',
+//   //     },
+//   //   },
+//   //   sm: {
+//   //     value: {
+//   //       fontSize: '0.875rem',
+//   //       lineHeight: '1.25rem',
+//   //     },
+//   //   },
+//   //   md: {
+//   //     value: {
+//   //       fontSize: '1rem',
+//   //       lineHeight: '1.5rem',
+//   //     },
+//   //   },
+//   //   lg: {
+//   //     value: {
+//   //       fontSize: '1.125rem',
+//   //       lineHeight: '1.75rem',
+//   //     },
+//   //   },
+//   //   xl: {
+//   //     value: {
+//   //       fontSize: '1.25rem',
+//   //       lineHeight: '1.75rem',
+//   //     },
+//   //   },
+//   //   '2xl': {
+//   //     value: {
+//   //       fontSize: '1.5rem',
+//   //       lineHeight: '2rem',
+//   //     },
+//   //   },
+//   //   '3xl': {
+//   //     value: {
+//   //       fontSize: '1.875rem',
+//   //       lineHeight: '2.25rem',
+//   //     },
+//   //   },
+//   //   '4xl': {
+//   //     value: {
+//   //       fontSize: '2.25rem',
+//   //       lineHeight: '2.5rem',
+//   //     },
+//   //   },
+//   //   '5xl': {
+//   //     value: {
+//   //       fontSize: '3rem',
+//   //       lineHeight: '1',
+//   //     },
+//   //   },
+//   //   '6xl': {
+//   //     value: {
+//   //       fontSize: '3.75rem',
+//   //       lineHeight: '1',
+//   //     },
+//   //   },
+//   //   '7xl': {
+//   //     value: {
+//   //       fontSize: '4.5rem',
+//   //       lineHeight: '1',
+//   //     },
+//   //   },
+//   //   '8xl': {
+//   //     value: {
+//   //       fontSize: '6rem',
+//   //       lineHeight: '1',
+//   //     },
+//   //   },
+//   //   '9xl': {
+//   //     value: {
+//   //       fontSize: '8rem',
+//   //       lineHeight: '1',
+//   //     },
+//   //   },
+// };
 
 // https://github.com/chakra-ui/panda/tree/4b70f29a14e98d9a0b450273704d2565e3f2d0bd/packages/preset-panda/src
 

@@ -75,6 +75,9 @@ export default function App() {
                 <Button variant="danger">Danger</Button>
               </HStack>
               <HStack>
+                <IconButton variant="ghost">
+                  <Icon name="close" />
+                </IconButton>
                 <IconButton>
                   <Icon name="arrow-left" />
                 </IconButton>
@@ -94,9 +97,18 @@ export default function App() {
                 alignItems={'center'}
               >
                 <Box gridColumn={'1 / -1'}>
-                  <Text as="h4" className={css({ color: 'gold.30' })}>
+                  <Text as="h4" color={'gold.30'} p={'8'} bg={'slate.100'}>
                     Text styles
                   </Text>
+                  <Box
+                    as="span"
+                    m={'8'}
+                    bg={'slate.100'}
+                    p={'8'}
+                    color={'gold.30'}
+                  >
+                    pizza
+                  </Box>
                 </Box>
                 <VStack gap={'16'}>
                   <Text>

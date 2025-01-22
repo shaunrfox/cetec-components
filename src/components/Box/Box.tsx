@@ -1,35 +1,30 @@
-import { Box as pandaBox } from '@styled-system/jsx';
+import * as React from 'react';
+import { type BoxProps as PandaBoxProps } from '@styled-system/jsx';
 
-export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
-  as?: React.ElementType;
+type AsProp<T extends React.ElementType> = {
+  as?: T;
+};
+
+type PropsToOmit<T extends React.ElementType, P> = keyof (AsProp<T> & P);
+
+type PolymorphicComponentProp<
+  T extends React.ElementType,
+  Props = {},
+> = React.PropsWithChildren<Props & AsProp<T>> &
+  Omit<React.ComponentPropsWithoutRef<T>, PropsToOmit<T, Props>>;
+
+type BoxComponentProps = PandaBoxProps;
+
+type BoxProps<T extends React.ElementType> = PolymorphicComponentProp<
+  T,
+  BoxComponentProps
+>;
+
+export function Box<T extends React.ElementType = 'div'>({
+  as,
+  children,
+  ...props
+}: BoxProps<T>) {
+  const Component = as || 'div';
+  return <Component {...props}>{children}</Component>;
 }
-
-const boxStyles = (theme: Theme) => css`
-  min-width: 0;
-  padding: ${theme.size[16]};
-`;
-
-const flexStyles = (theme: Theme) => css`
-  display: flex;
-  gap: ${theme.size[16]};
-`;
-
-const flexColumnStyles = css`
-  flex-direction: column;
-`;
-
-const Box = React.forwardRef<HTMLDivElement, BoxProps>(
-  ({ as: Component = 'div', ...props }, ref) => {
-    return <Component ref={ref} css={boxStyles} {...props} />;
-  },
-);
-
-const Flex = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => (
-  <Box ref={ref} css={flexStyles} {...props} />
-));
-
-const FlexColumn = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => (
-  <Box ref={ref} css={[flexStyles, flexColumnStyles]} {...props} />
-));
-
-export { Box, Flex, FlexColumn };

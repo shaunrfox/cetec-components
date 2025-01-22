@@ -7,7 +7,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    // "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
@@ -19,7 +19,16 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "moduleResolution": "node"
   },
-  "include": ["vite.config.ts", "src", "styled-system"]
+  "include": [
+    "vite.config.ts",
+    "src",
+    "styled-system",
+    "src/**/*",
+    "playroom/**/*",
+    "styled-system/**/*"
+  ]
 }

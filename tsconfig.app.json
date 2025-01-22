@@ -21,6 +21,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+    "esModuleInterop": true,
 
     "baseUrl": ".",
     "paths": {
@@ -28,5 +29,12 @@
       "@styled-system/*": ["./styled-system/*"]
     }
   },
-  "include": ["src", "styled-system"]
+  "include": [
+    "src",
+    "styled-system",
+    "styled-system.d.ts",
+    "src/**/*",
+    "playroom/**/*",
+    "styled-system/**/*"
+  ]
 }
